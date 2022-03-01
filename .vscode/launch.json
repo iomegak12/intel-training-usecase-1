@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                "ORDERS_DATA_FOLDER": "./data/orders/",
+                "CUSTOMERS_SERVICE_URL": "https://621e3ecf849220b1fc942bac.mockapi.io/customers",
+                "PRODUCTS_DATA_FILE": "./data/products.csv"
+            }
+        }
+    ]
+}
