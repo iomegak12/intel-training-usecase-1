@@ -2,3 +2,4 @@ pandas
 pep8
 prettytable
 pyfiglet
+requests
