@@ -1,0 +1,2 @@
+IP,Timestamp,Verb,Path,Protocol,StatusCode,NoOfBytes
+27.59.104.166,04/Oct/2019:21:15:54 +0000,GET,/users/login,HTTP/1.1,404,41716

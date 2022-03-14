@@ -1,0 +1,141 @@
+^ - starts with
+$ - ends with
+. - a character
+
+^a...s$     -   abs     -   Not Matching
+            -   alias   -   Matching
+            -   abyss   -   Matching
+            -   Alias   -   Not Matching
+            -   An abacus - Not Matching
+            -   alias
+                abyss
+
+Metacharacters - They're interpreted in a special way by a RegExp Engine
+
+[].^$+*{}()\|
+
+[abc]       -   a           1 Match
+            -   abc         3 Matches
+            -   Hey Jude    No Match
+            -   abc de ca   5 Matches
+
+[a-e]
+[a-zA-Z]
+[1-4]
+[0-39]  is same as [01239]
+
+. - Matches any single character
+
+..          -   a       -   No Match
+            -   ab      -   Matching
+
+
+* - Zero or More Occurrences
+
+ma*n         -      mn      1 Match
+             -      man     1 Match
+             -      maaan   1 Match
+             -      main    Not Matching
+             -      woman   Matching
+
++   -  One or More Occurrences
+
+    -      mn      Not Matching
+    -      man      Matching (1)
+
+
+{}  -   for example - {n, m} - this means at least n and at most m repetitions of the pattern left to it
+
+a{2,3}      -   abc dat         -       Not Matching
+                abc daat        -       Matching
+                aabc daaat      -       2 Matches
+
+
+
+[0-9]{3,4}          -   Means?
+
+    123             -   Matching
+    0 83 0384       -   Matching (0384)
+    90000 99933     -   Not Matching
+
+
+    839 37247 34098             -   4 Matches
+    38498 3498 2348 3984
+
+
+| - Alternation
+
+a|b         -   cde     -   Not Matching
+            -   ade     -   1 Match
+            -   acdbea  -   3 Matches
+
+
+()  -   Grouping
+
+(a|b|c)xz       -   ab xz       -   Not Matching
+                -   abxz        -   1 Match
+                -   axz canxz   -   1 Matches
+
+
+\               -   backlash is used to escape various characters including all Metacharacters
+
+\$a     -   match if a string contains $ followed by a. Here $ is not interepreted by a RegExp engine in a 
+            special way
+
+    -   $a$b$c  -   Matching
+    -   $m$n$c  -   Not Matching
+
+
+Special Characters in the Engine
+
+\A - Matches if the specified characters are at the start of the string
+
+\Athe       -   the sun         -   Match
+            -   In the sun      -   Not Matching
+
+\A[A-Z]     -   the sun         -   Not matching
+            -   In the sun      -   Matching
+
+\A[A-Z]{3,4}    -   In the sun  -   Not matching
+                -   Dear Friend,    - Not Matching
+                -   DEAR Friend,    - Matching
+
+
+
+\B  -  Matches if the specified characters are NOT at the beginning of the string / word
+
+\Bfoo      -       football     -   Not Matching
+            -      football match - Not matching
+            -      afootball   -   Matching
+
+
+\d      -   decimals
+
+        -   12abc3        - 3 Matches
+        - Python        -   Not Matching
+
+\d{5}-\d{5} -   Indian Mobile Number
+    90000-90000     -   Matching
+    080-3984983     -   Not Matching
+
+
+\s      -   whitespace character - matches where a string contains anywhere any whitespace character
+                \t
+                \n
+                \r
+                \f
+                \v
+
+
+    \s          -   Python RegEx        -   Matching
+                -   PythonRegExpLib     -   Not Matching
+
+
+\w  -   Matches any alphanumeric characters (digits / alphabets) - [a-zA-Z0-9_]    
+            _ is also considered as alphanumberic
+
+
+    -   12&": ;c       -    3 Matches
+    -   %"> !           - No Matches
+
+
