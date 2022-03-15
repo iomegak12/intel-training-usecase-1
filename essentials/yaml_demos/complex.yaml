@@ -1,0 +1,9 @@
+host:
+  name: RAMTHINKPAD
+  programs:
+    - name: Internet Explorer
+      process: 2489
+      bytes: 3849384
+    - name: Chrome
+      process: 4834
+      bytes: 849489348
