@@ -1,0 +1,14 @@
+cities:
+  - New York
+  - Bangalore
+  - New Delhi
+  - Sydney
+  - Frankfurt
+  - Houston
+---
+companies:
+  - Intel
+  - Microsoft
+  - Siemens
+  - Amazon
+  - Oracle

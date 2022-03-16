@@ -1,0 +1,12 @@
+hosts:
+  {% for host in hosts -%}
+  {% if host.remote -%}
+  - host: {{ host.name }}
+      programs:
+        {% for program in host.programs -%}
+        - name: {{ program.name }}
+          process_id: {{ program.process_id }}
+          bytes_in_memory: {{ program.bytes_in_memory }}
+        {% endfor %}
+  {% endif %}
+  {% endfor %}

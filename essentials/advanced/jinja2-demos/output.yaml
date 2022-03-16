@@ -1,0 +1,9 @@
+hosts:
+  - host: RAMTHINKPAD
+    servers:
+      - primary: 0.pool.server1
+        secondary: 
+    ntp:
+      - primary: ntp.pool.server1
+        secondary: ntp.pool.server2
+        third: ramkumar.server.intel-training.com

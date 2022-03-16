@@ -1,0 +1,11 @@
+hosts:
+  - host: {{ interface.host_name }}
+    servers:
+      - primary: {{ interface.primary_server }}
+        secondary: {{ interface.secondary_server }}
+    ntp:
+      - primary: {{ interface.ntp_primary }}
+        secondary: {{ interface.ntp_secondary }}
+        third: ramkumar.server.intel-training.com
+
+    

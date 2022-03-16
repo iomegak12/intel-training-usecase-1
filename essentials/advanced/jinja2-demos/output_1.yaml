@@ -1,0 +1,24 @@
+hosts:
+  - host: ramthinkpad
+      programs:
+        - name: Internet Explorer
+          process_id: 83948
+          bytes_in_memory: 849834
+        - name: Chrome
+          process_id: 813948
+          bytes_in_memory: 8149834
+        
+        
+  
+  - host: remote-server-x
+      programs:
+        - name: Safari
+          process_id: 83000
+          bytes_in_memory: 75655
+        - name: Chrome
+          process_id: 813948
+          bytes_in_memory: 8149834
+        
+        
+  
+  

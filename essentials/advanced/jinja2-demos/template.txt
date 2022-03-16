@@ -1,0 +1,14 @@
+{# DNS Configuration -#}
+hostname {{ hostname }}
+
+no ip domain lookup
+
+ip domain-name local.lab
+
+ip name-server {{ name_server_primary }}
+ip name-server {{ name_server_secondary }}
+
+{# Network Time Protocol Configuration -#}
+
+ntp server {{ ntp_server_primary }} prefer
+ntp server {{ ntp_server_secondary }}

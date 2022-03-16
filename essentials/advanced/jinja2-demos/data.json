@@ -1,0 +1,9 @@
+{
+    "interface": {
+        "host_name": "RAMTHINKPAD",
+        "primary_server": "0.pool.server1",
+        "secondary_sever": "0.pool.server2",
+        "ntp_primary": "ntp.pool.server1",
+        "ntp_secondary": "ntp.pool.server2"
+    }
+}
